@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidget</class>
+ <widget class="QWidget" name="MainWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1099</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWidget</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>1081</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>100</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,255,255);
+background-color:rgba(255,255,255,50);</string>
+    </property>
+    <property name="text">
+     <string>歌曲名称</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>851</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>新宋体</family>
+      <pointsize>12</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,255,255);
+background-color:rgba(255,255,255,50);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Search">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>10</y>
+      <width>93</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,255,255);
+background-color:rgba(255,255,255,50);</string>
+    </property>
+    <property name="text">
+     <string>搜索</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>1081</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,255,255);</string>
+    </property>
+    <property name="text">
+     <string>搜索歌曲</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget_History">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>40</y>
+      <width>251</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,255,255);
+background-color:rgba(255,255,255,50);</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_Lyric">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>40</y>
+      <width>551</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,255,255);
+background-color:rgba(255,255,255,50);</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget_Search">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>241</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,255,255);
+background-color:rgba(255,255,255,50);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>10</y>
+      <width>67</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,255,255);</string>
+    </property>
+    <property name="text">
+     <string>歌词</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>10</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255,255,255);</string>
+    </property>
+    <property name="text">
+     <string>播放记录</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>0</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_About">
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+border-radius:0px; 
+background-repeat:no-repeat;
+border:none;
+background-position:center center;
+}
+QPushButton:hover
+{
+background-color:rgba(230,0,0,0.5);
+}
+QPushButton:pressed
+{
+background-color:rgba(95,95,95,100);
+border-color:rgba(255,255,255,30);
+border-style:inset;
+color:rgba(0,0,0,100);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="images.qrc">
+        <normaloff>:/images/about.png</normaloff>:/images/about.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Skin">
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+border-radius:0px;
+background-repeat:no-repeat;
+border:none;
+background-position:center center;
+}
+QPushButton:hover
+{
+background-color:rgba(230,0,0,0.5);
+}
+QPushButton:pressed
+{
+background-color:rgba(95,95,95,100);
+border-color:rgba(255,255,255,30);
+border-style:inset;
+color:rgba(0,0,0,100);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="images.qrc">
+        <normaloff>:/images/skin.png</normaloff>:/images/skin.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Close">
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+border-radius:0px;
+background-repeat:no-repeat;
+border:none;
+background-position:center center;
+}
+QPushButton:hover
+{
+background-color:rgba(230,0,0,0.5);
+}
+QPushButton:pressed
+{
+background-color:rgba(95,95,95,100);
+border-color:rgba(255,255,255,30);
+border-style:inset;
+color:rgba(0,0,0,100);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="images.qrc">
+        <normaloff>:/images/quit.png</normaloff>:/images/quit.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>540</y>
+     <width>1081</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QSlider" name="TimeSlider">
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_Time">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>00:00</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>580</y>
+     <width>1081</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QPushButton" name="pushButton_Last">
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>上一曲</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+border-radius:0px; 
+background-repeat:no-repeat;
+border:none;
+background-position:center center;
+}
+QPushButton:hover
+{
+background-color:rgba(230,0,0,0.5);
+}
+QPushButton:pressed
+{
+background-color:rgba(95,95,95,100);
+border-color:rgba(255,255,255,30);
+border-style:inset;
+color:rgba(0,0,0,100);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="images.qrc">
+        <normaloff>:/images/pre-hover.png</normaloff>:/images/pre-hover.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_8">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_6">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Play">
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>播放|暂停</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+border-radius:0px; 
+background-repeat:no-repeat;
+border:none;
+background-position:center center;
+}
+QPushButton:hover
+{
+background-color:rgba(230,0,0,0.5);
+}
+QPushButton:pressed
+{
+background-color:rgba(95,95,95,100);
+border-color:rgba(255,255,255,30);
+border-style:inset;
+color:rgba(0,0,0,100);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="images.qrc">
+        <normaloff>:/images/pase-hover.png</normaloff>:/images/pase-hover.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_5">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_7">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Next">
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>下一曲</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+border-radius:0px; 
+background-repeat:no-repeat;
+border:none;
+background-position:center center;
+}
+QPushButton:hover
+{
+background-color:rgba(230,0,0,0.5);
+}
+QPushButton:pressed
+{
+background-color:rgba(95,95,95,100);
+border-color:rgba(255,255,255,30);
+border-style:inset;
+color:rgba(0,0,0,100);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="images.qrc">
+        <normaloff>:/images/next-hover.png</normaloff>:/images/next-hover.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Loop">
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>循环播放</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+border-radius:0px; 
+background-repeat:no-repeat;
+border:none;
+background-position:center center;
+}
+QPushButton:hover
+{
+background-color:rgba(230,0,0,0.5);
+}
+QPushButton:pressed
+{
+background-color:rgba(95,95,95,100);
+border-color:rgba(255,255,255,30);
+border-style:inset;
+color:rgba(0,0,0,100);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="images.qrc">
+        <normaloff>:/images/loop-hover.png</normaloff>:/images/loop-hover.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QSlider" name="VolumnSlider">
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="pageStep">
+       <number>30</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_Volumn">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>00</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>groupBox_2</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>pushButton_About</zorder>
+  <zorder>pushButton_Skin</zorder>
+  <zorder>pushButton_Close</zorder>
+  <zorder>TimeSlider</zorder>
+  <zorder>label_Time</zorder>
+  <zorder>pushButton_Last</zorder>
+  <zorder>pushButton_Play</zorder>
+  <zorder>pushButton_Next</zorder>
+  <zorder>pushButton_Loop</zorder>
+  <zorder>VolumnSlider</zorder>
+  <zorder>label_Volumn</zorder>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
