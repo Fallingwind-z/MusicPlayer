@@ -30,7 +30,7 @@ class Ui_MainWidget
 public:
     QGroupBox *groupBox;
     QPushButton *pushButton;
-    QLineEdit *lineEdit;
+    QLineEdit *lineEdit_Search;
     QPushButton *pushButton_Search;
     QGroupBox *groupBox_2;
     QLabel *label;
@@ -39,16 +39,16 @@ public:
     QListWidget *listWidget_Search;
     QLabel *label_2;
     QLabel *label_3;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton_About;
     QPushButton *pushButton_Skin;
     QPushButton *pushButton_Close;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_2;
     QSlider *TimeSlider;
     QLabel *label_Time;
-    QWidget *widget2;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *pushButton_Last;
     QSpacerItem *horizontalSpacer_8;
@@ -85,15 +85,15 @@ public:
         pushButton->setStyleSheet(QString::fromUtf8("color:rgb(255,255,255);\n"
 "background-color:rgba(255,255,255,50);"));
         pushButton->setIconSize(QSize(20, 20));
-        lineEdit = new QLineEdit(groupBox);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(120, 10, 851, 40));
+        lineEdit_Search = new QLineEdit(groupBox);
+        lineEdit_Search->setObjectName("lineEdit_Search");
+        lineEdit_Search->setGeometry(QRect(120, 10, 851, 40));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("\346\226\260\345\256\213\344\275\223")});
         font1.setPointSize(12);
         font1.setBold(false);
-        lineEdit->setFont(font1);
-        lineEdit->setStyleSheet(QString::fromUtf8("color:rgb(255,255,255);\n"
+        lineEdit_Search->setFont(font1);
+        lineEdit_Search->setStyleSheet(QString::fromUtf8("color:rgb(255,255,255);\n"
 "background-color:rgba(255,255,255,50);"));
         pushButton_Search = new QPushButton(groupBox);
         pushButton_Search->setObjectName("pushButton_Search");
@@ -137,13 +137,13 @@ public:
         label_3->setGeometry(QRect(820, 10, 81, 20));
         label_3->setFont(font);
         label_3->setStyleSheet(QString::fromUtf8("color:rgb(255,255,255);"));
-        widget = new QWidget(MainWidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(940, 0, 161, 51));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(MainWidget);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(940, 0, 161, 51));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton_About = new QPushButton(widget);
+        pushButton_About = new QPushButton(layoutWidget);
         pushButton_About->setObjectName("pushButton_About");
         pushButton_About->setCursor(QCursor(Qt::OpenHandCursor));
         pushButton_About->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -171,7 +171,7 @@ public:
 
         horizontalLayout->addWidget(pushButton_About);
 
-        pushButton_Skin = new QPushButton(widget);
+        pushButton_Skin = new QPushButton(layoutWidget);
         pushButton_Skin->setObjectName("pushButton_Skin");
         pushButton_Skin->setCursor(QCursor(Qt::OpenHandCursor));
         pushButton_Skin->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -199,7 +199,7 @@ public:
 
         horizontalLayout->addWidget(pushButton_Skin);
 
-        pushButton_Close = new QPushButton(widget);
+        pushButton_Close = new QPushButton(layoutWidget);
         pushButton_Close->setObjectName("pushButton_Close");
         pushButton_Close->setCursor(QCursor(Qt::OpenHandCursor));
         pushButton_Close->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -227,13 +227,13 @@ public:
 
         horizontalLayout->addWidget(pushButton_Close);
 
-        widget1 = new QWidget(MainWidget);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(10, 540, 1081, 28));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(MainWidget);
+        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setGeometry(QRect(10, 540, 1081, 28));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        TimeSlider = new QSlider(widget1);
+        TimeSlider = new QSlider(layoutWidget1);
         TimeSlider->setObjectName("TimeSlider");
         TimeSlider->setCursor(QCursor(Qt::OpenHandCursor));
         TimeSlider->setMaximum(100);
@@ -241,20 +241,20 @@ public:
 
         horizontalLayout_2->addWidget(TimeSlider);
 
-        label_Time = new QLabel(widget1);
+        label_Time = new QLabel(layoutWidget1);
         label_Time->setObjectName("label_Time");
         label_Time->setFont(font);
         label_Time->setStyleSheet(QString::fromUtf8("color:rgb(255,255,255);"));
 
         horizontalLayout_2->addWidget(label_Time);
 
-        widget2 = new QWidget(MainWidget);
-        widget2->setObjectName("widget2");
-        widget2->setGeometry(QRect(10, 580, 1081, 51));
-        horizontalLayout_3 = new QHBoxLayout(widget2);
+        layoutWidget2 = new QWidget(MainWidget);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(10, 580, 1081, 51));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_3->setObjectName("horizontalLayout_3");
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        pushButton_Last = new QPushButton(widget2);
+        pushButton_Last = new QPushButton(layoutWidget2);
         pushButton_Last->setObjectName("pushButton_Last");
         pushButton_Last->setCursor(QCursor(Qt::OpenHandCursor));
         pushButton_Last->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -295,7 +295,7 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_6);
 
-        pushButton_Play = new QPushButton(widget2);
+        pushButton_Play = new QPushButton(layoutWidget2);
         pushButton_Play->setObjectName("pushButton_Play");
         pushButton_Play->setCursor(QCursor(Qt::OpenHandCursor));
         pushButton_Play->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -331,7 +331,7 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_7);
 
-        pushButton_Next = new QPushButton(widget2);
+        pushButton_Next = new QPushButton(layoutWidget2);
         pushButton_Next->setObjectName("pushButton_Next");
         pushButton_Next->setCursor(QCursor(Qt::OpenHandCursor));
         pushButton_Next->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -367,7 +367,7 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_3);
 
-        pushButton_Loop = new QPushButton(widget2);
+        pushButton_Loop = new QPushButton(layoutWidget2);
         pushButton_Loop->setObjectName("pushButton_Loop");
         pushButton_Loop->setCursor(QCursor(Qt::OpenHandCursor));
         pushButton_Loop->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -403,7 +403,7 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer);
 
-        VolumnSlider = new QSlider(widget2);
+        VolumnSlider = new QSlider(layoutWidget2);
         VolumnSlider->setObjectName("VolumnSlider");
         VolumnSlider->setCursor(QCursor(Qt::OpenHandCursor));
         VolumnSlider->setMaximum(100);
@@ -412,26 +412,18 @@ public:
 
         horizontalLayout_3->addWidget(VolumnSlider);
 
-        label_Volumn = new QLabel(widget2);
+        label_Volumn = new QLabel(layoutWidget2);
         label_Volumn->setObjectName("label_Volumn");
         label_Volumn->setFont(font);
         label_Volumn->setStyleSheet(QString::fromUtf8("color:rgb(255,255,255);"));
 
         horizontalLayout_3->addWidget(label_Volumn);
 
+        layoutWidget->raise();
+        layoutWidget->raise();
+        layoutWidget->raise();
         groupBox_2->raise();
         groupBox->raise();
-        pushButton_About->raise();
-        pushButton_Skin->raise();
-        pushButton_Close->raise();
-        TimeSlider->raise();
-        label_Time->raise();
-        pushButton_Last->raise();
-        pushButton_Play->raise();
-        pushButton_Next->raise();
-        pushButton_Loop->raise();
-        VolumnSlider->raise();
-        label_Volumn->raise();
 
         retranslateUi(MainWidget);
 
@@ -443,7 +435,7 @@ public:
         MainWidget->setWindowTitle(QCoreApplication::translate("MainWidget", "MainWidget", nullptr));
         groupBox->setTitle(QString());
         pushButton->setText(QCoreApplication::translate("MainWidget", "\346\255\214\346\233\262\345\220\215\347\247\260", nullptr));
-        lineEdit->setText(QString());
+        lineEdit_Search->setText(QString());
         pushButton_Search->setText(QCoreApplication::translate("MainWidget", "\346\220\234\347\264\242", nullptr));
         groupBox_2->setTitle(QString());
         label->setText(QCoreApplication::translate("MainWidget", "\346\220\234\347\264\242\346\255\214\346\233\262", nullptr));

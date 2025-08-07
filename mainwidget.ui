@@ -57,7 +57,7 @@ background-color:rgba(255,255,255,50);</string>
      </size>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEdit_Search">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -235,7 +235,7 @@ background-color:rgba(255,255,255,50);</string>
     </property>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>940</x>
@@ -367,7 +367,7 @@ color:rgba(0,0,0,100);
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -408,7 +408,7 @@ color:rgba(0,0,0,100);
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -731,19 +731,11 @@ color:rgba(0,0,0,100);
     </item>
    </layout>
   </widget>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
   <zorder>groupBox_2</zorder>
   <zorder>groupBox</zorder>
-  <zorder>pushButton_About</zorder>
-  <zorder>pushButton_Skin</zorder>
-  <zorder>pushButton_Close</zorder>
-  <zorder>TimeSlider</zorder>
-  <zorder>label_Time</zorder>
-  <zorder>pushButton_Last</zorder>
-  <zorder>pushButton_Play</zorder>
-  <zorder>pushButton_Next</zorder>
-  <zorder>pushButton_Loop</zorder>
-  <zorder>VolumnSlider</zorder>
-  <zorder>label_Volumn</zorder>
  </widget>
  <resources>
   <include location="images.qrc"/>

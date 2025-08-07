@@ -14,11 +14,14 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
-#include <QSqlRecord>
+#include <QSqlRecord>               //封装数据库表的字段信息和操作记录的数据
 #include <QMessageBox>
 #include <QTime>
 #include <math.h>
 #include <QMouseEvent>
+
+static QString kugouSearchApi = "http://mobilecdn.kugou.com/api/v3/search/song?";
+static QString kugouDownloadApi = "https://wwwapi.kugou.com/yy/index.php?";
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -38,8 +41,8 @@ public:
     void paintEvent(QPaintEvent *event);
 
 signals:
-    // void finish(QByteArray);
-    // void lyricShow(QString);
+    void finish(QByteArray);
+    void lyricShow(QString);
 
 private slots:
     void on_pushButton_Close_clicked(); //关闭窗口
@@ -67,13 +70,17 @@ private slots:
     void on_TimeSlider_sliderReleased(); //播放进度条释放
 
     //更新播放的进度条和显示的时间
-    void updateDurawtion(qint64);
+    void updateDuration(qint64);
 
     //读取网络数据的槽函数
     void netReply(QNetworkReply *);
 
     //显示歌词的槽函数
     void lyricTextShow(QString);
+
+    //音乐播放
+    void playSearchSong(); //双击搜索列表播放音乐
+    void playHistorySong(); //双击播放记录表播放音乐
 
 protected:
     //音乐歌曲的下载和播放
@@ -100,7 +107,7 @@ private:
 
     //处理鼠标拖动窗口移动操作
 private:
-    QPoint mousePoint;
+    QPoint m_mousePoint;
     QPoint movePoint;
     bool mousePress;
 protected:
